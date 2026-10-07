@@ -720,6 +720,46 @@ h2 {
     var(--ph-line-height-body-sm) var(--ph-font-family-sans);
 }
 
+.button-story-group {
+  width: min(48rem, calc(100vw - var(--ph-space-6)));
+  padding: var(--ph-space-5);
+  border: 1px solid var(--ph-color-border-default);
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--ph-color-text-primary) 4%, transparent) 1px,
+      transparent 1px
+    ),
+    var(--ph-color-bg-elevated);
+  background-size: var(--ph-space-6) 100%;
+}
+
+.button-product-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--ph-space-6);
+  align-items: end;
+  width: min(52rem, calc(100vw - var(--ph-space-6)));
+  padding: var(--ph-space-6);
+  border: 1px solid var(--ph-color-border-strong);
+  border-inline-start: var(--ph-space-1) solid var(--ph-color-accent);
+  background: var(--ph-color-bg-elevated);
+  box-shadow: var(--ph-shadow-md);
+}
+
+.button-product-card h2 {
+  margin: var(--ph-space-2) 0 var(--ph-space-1);
+  font-size: var(--ph-font-size-heading-3);
+  line-height: var(--ph-line-height-heading-3);
+}
+
+@media (max-width: 620px) {
+  .button-product-card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
 @media (max-width: 900px) {
   .masthead {
     grid-template-columns: 1fr auto;

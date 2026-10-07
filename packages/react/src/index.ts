@@ -1,5 +1,11 @@
 export { Box } from './components/Box';
 export type { BoxProps } from './components/Box';
+export { Button } from './components/Button';
+export type {
+  ButtonProps,
+  ButtonSize,
+  ButtonVariant,
+} from './components/Button';
 export { Heading } from './components/Heading';
 export type {
   HeadingLevel,
@@ -8,6 +14,8 @@ export type {
 } from './components/Heading';
 export { Inline } from './components/Inline';
 export type { InlineProps } from './components/Inline';
+export { IconButton } from './components/IconButton';
+export type { IconButtonProps } from './components/IconButton';
 export { PhasicProvider } from './components/PhasicProvider';
 export type {
   PhasicProviderProps,
