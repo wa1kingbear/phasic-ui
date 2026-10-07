@@ -1,0 +1,147 @@
+.root {
+  --ph-button-background: var(--ph-color-bg-inverse);
+  --ph-button-background-hover: color-mix(
+    in srgb,
+    var(--ph-color-bg-inverse) 88%,
+    var(--ph-color-bg-surface)
+  );
+  --ph-button-border: var(--ph-color-bg-inverse);
+  --ph-button-color: var(--ph-color-text-inverse);
+
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  border: 1px solid var(--ph-button-border);
+  border-radius: var(--ph-radius-sm);
+  color: var(--ph-button-color);
+  background: var(--ph-button-background);
+  box-shadow: var(--ph-shadow-sm);
+  font-family: var(--ph-font-family-sans);
+  font-weight: var(--ph-font-weight-semibold);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color var(--ph-duration-fast) var(--ph-ease-standard),
+    background-color var(--ph-duration-fast) var(--ph-ease-standard),
+    border-color var(--ph-duration-fast) var(--ph-ease-standard),
+    box-shadow var(--ph-duration-fast) var(--ph-ease-standard),
+    transform var(--ph-duration-instant) var(--ph-ease-standard);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.root:focus-visible {
+  outline: var(--ph-focus-ring-width) solid var(--ph-color-focus-ring);
+  outline-offset: var(--ph-focus-ring-offset);
+}
+
+.root:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.root[aria-pressed='true'] {
+  box-shadow:
+    inset 0 0 0 1px currentcolor,
+    var(--ph-shadow-sm);
+}
+
+.root:disabled {
+  --ph-button-background: var(--ph-color-bg-surface);
+  --ph-button-background-hover: var(--ph-color-bg-surface);
+  --ph-button-border: var(--ph-color-border-default);
+  --ph-button-color: var(--ph-color-text-muted);
+
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sm {
+  min-height: 2rem;
+  gap: var(--ph-space-1);
+  padding-inline: var(--ph-space-3);
+  font-size: var(--ph-font-size-caption);
+  line-height: var(--ph-line-height-caption);
+}
+
+.md {
+  min-height: 2.5rem;
+  gap: var(--ph-space-2);
+  padding-inline: var(--ph-space-4);
+  font-size: var(--ph-font-size-body-sm);
+  line-height: var(--ph-line-height-body-sm);
+}
+
+.lg {
+  min-height: 3rem;
+  gap: var(--ph-space-2);
+  padding-inline: var(--ph-space-5);
+  font-size: var(--ph-font-size-body);
+  line-height: var(--ph-line-height-body);
+}
+
+.secondary {
+  --ph-button-background: var(--ph-color-bg-elevated);
+  --ph-button-background-hover: var(--ph-color-bg-surface);
+  --ph-button-border: var(--ph-color-border-strong);
+  --ph-button-color: var(--ph-color-text-primary);
+}
+
+.ghost {
+  --ph-button-background: transparent;
+  --ph-button-background-hover: var(--ph-color-bg-surface);
+  --ph-button-border: transparent;
+  --ph-button-color: var(--ph-color-text-primary);
+
+  box-shadow: none;
+}
+
+.danger {
+  --ph-button-background: var(--ph-color-danger);
+  --ph-button-background-hover: color-mix(
+    in srgb,
+    var(--ph-color-danger) 84%,
+    var(--ph-color-bg-inverse)
+  );
+  --ph-button-border: var(--ph-color-danger);
+  --ph-button-color: var(--ph-color-text-inverse);
+}
+
+.label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon {
+  display: inline-grid;
+  flex: none;
+  width: 1em;
+  height: 1em;
+  place-items: center;
+}
+
+.icon > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (hover: hover) {
+  .root:hover:not(:disabled) {
+    background: var(--ph-button-background-hover);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root {
+    transition-duration: 0.01ms;
+  }
+
+  .root:active:not(:disabled) {
+    transform: none;
+  }
+}

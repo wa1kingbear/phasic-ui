@@ -219,6 +219,24 @@ import {
 
 `Heading` keeps semantic `level` separate from visual `size`. `Box`, `Stack`, and `Inline` accept normal props for their selected `as` element and express spacing with the `0`–`8` Phasic scale.
 
+## Button primitives
+
+`Button` keeps native button behavior while adding intent variants, tokenized sizes and decorative icon slots. `IconButton` uses the same visual system and requires an `aria-label`, so an icon-only action cannot be created without an accessible name.
+
+```tsx
+import { Button, IconButton, Inline } from '@phasic-ui/react';
+
+<Inline gap={2} role="group" aria-label="Release actions">
+  <Button variant="secondary">Review checks</Button>
+  <Button endIcon={<ArrowRightIcon />}>Approve release</Button>
+  <IconButton aria-label="Open release actions" variant="ghost">
+    <MoreIcon />
+  </IconButton>
+</Inline>;
+```
+
+The base `Button` intentionally has no loading, success or error phase. Those action states belong to `AsyncButton`, which builds on this primitive without changing its native semantics.
+
 ## API direction
 
 ### AsyncButton

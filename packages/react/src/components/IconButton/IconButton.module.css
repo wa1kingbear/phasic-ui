@@ -1,0 +1,14 @@
+.root[data-size='sm'] {
+  width: 2rem;
+  padding-inline: 0;
+}
+
+.root[data-size='md'] {
+  width: 2.5rem;
+  padding-inline: 0;
+}
+
+.root[data-size='lg'] {
+  width: 3rem;
+  padding-inline: 0;
+}
