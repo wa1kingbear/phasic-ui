@@ -167,6 +167,21 @@ const panelStyle = {
 
 Importing the stylesheet applies the light theme globally. To establish an explicit subtree boundary, add `data-ph-theme="light"` or the `ph-theme-light` class to a container. Components consume semantic variables such as `--ph-color-text-primary`; raw palette variables are implementation inputs rather than component contracts.
 
+Use `PhasicProvider` to establish the matching React context and theme marker for an application subtree:
+
+```tsx
+import { PhasicProvider } from '@phasic-ui/react';
+import '@phasic-ui/tokens/styles.css';
+
+root.render(
+  <PhasicProvider theme="light">
+    <App />
+  </PhasicProvider>,
+);
+```
+
+The provider accepts normal `div` attributes as root escape hatches and does not inject CSS at runtime.
+
 ## API direction
 
 ### AsyncButton
