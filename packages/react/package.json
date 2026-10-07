@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "sideEffects": [
-    "*.css"
+    "**/*.css"
   ],
   "files": [
     "dist"
@@ -21,7 +21,7 @@
     "react-dom": "^18.2.0 || ^19.0.0"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-css.mjs",
     "dev": "tsc -p tsconfig.build.json --watch",
     "lint": "eslint .",
     "test": "vitest run --passWithNoTests",

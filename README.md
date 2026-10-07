@@ -182,6 +182,43 @@ root.render(
 
 The provider accepts normal `div` attributes as root escape hatches and does not inject CSS at runtime.
 
+## Layout and typography primitives
+
+The first React primitives keep spacing and typography on the shared token scale while preserving native document semantics:
+
+```tsx
+import {
+  Box,
+  Heading,
+  Inline,
+  Stack,
+  Text,
+  VisuallyHidden,
+} from '@phasic-ui/react';
+
+<Box as="section" padding={6} aria-labelledby="deployment-heading">
+  <Stack gap={4}>
+    <Inline as="header" justify="between">
+      <Heading id="deployment-heading" level={2} size="heading-1">
+        Deployment health
+      </Heading>
+      <Text tone="success" weight="semibold">
+        Healthy
+      </Text>
+    </Inline>
+    <Text tone="secondary">
+      All production checks completed successfully.
+    </Text>
+    <button type="button">
+      <span aria-hidden="true">×</span>
+      <VisuallyHidden>Close deployment details</VisuallyHidden>
+    </button>
+  </Stack>
+</Box>;
+```
+
+`Heading` keeps semantic `level` separate from visual `size`. `Box`, `Stack`, and `Inline` accept normal props for their selected `as` element and express spacing with the `0`–`8` Phasic scale.
+
 ## API direction
 
 ### AsyncButton

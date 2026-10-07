@@ -1,0 +1,9 @@
+.root {
+  box-sizing: border-box;
+  margin: var(--ph-box-margin);
+  margin-block: var(--ph-box-margin-block);
+  margin-inline: var(--ph-box-margin-inline);
+  padding: var(--ph-box-padding);
+  padding-block: var(--ph-box-padding-block);
+  padding-inline: var(--ph-box-padding-inline);
+}
