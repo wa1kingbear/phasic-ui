@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { PhasicProvider } from '@phasic-ui/react';
 import '@phasic-ui/tokens/styles.css';
 import { App } from './App';
 import './styles.css';
@@ -12,6 +13,8 @@ if (!root) {
 
 createRoot(root).render(
   <StrictMode>
-    <App />
+    <PhasicProvider>
+      <App />
+    </PhasicProvider>
   </StrictMode>,
 );

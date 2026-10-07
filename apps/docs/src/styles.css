@@ -570,6 +570,54 @@ h2 {
   background: var(--ph-color-accent);
 }
 
+.provider-story {
+  display: grid;
+  min-height: 100vh;
+  padding: clamp(var(--ph-space-5), 8vw, var(--ph-space-8));
+  place-items: center;
+  background:
+    linear-gradient(
+      color-mix(in srgb, var(--ph-color-text-primary) 4%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--ph-color-text-primary) 4%, transparent) 1px,
+      transparent 1px
+    ),
+    var(--ph-color-bg-canvas);
+  background-size: var(--ph-space-6) var(--ph-space-6);
+}
+
+.provider-story-card {
+  position: relative;
+  width: min(52rem, 100%);
+  padding: clamp(var(--ph-space-5), 6vw, var(--ph-space-8));
+  border: 1px solid var(--ph-color-border-strong);
+  background: color-mix(in srgb, var(--ph-color-bg-elevated) 86%, transparent);
+  box-shadow: var(--ph-shadow-md);
+}
+
+.provider-story-card h1 {
+  margin: 0;
+  font-size: clamp(2.75rem, 7vw, var(--ph-font-size-display));
+}
+
+.provider-story-card > p:last-child {
+  max-width: 38rem;
+  margin: var(--ph-space-5) 0 0;
+  color: var(--ph-color-text-secondary);
+  font-size: var(--ph-font-size-body);
+  line-height: var(--ph-line-height-body);
+}
+
+.provider-story-signal {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--ph-space-1);
+  background: var(--ph-color-accent);
+}
+
 @media (max-width: 900px) {
   .masthead {
     grid-template-columns: 1fr auto;
