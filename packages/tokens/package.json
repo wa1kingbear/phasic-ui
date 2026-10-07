@@ -8,13 +8,15 @@
     "*.css"
   ],
   "files": [
-    "dist"
+    "dist",
+    "styles.css"
   ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./styles.css": "./styles.css"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",

@@ -151,6 +151,22 @@ pnpm storybook      # run Storybook
 
 If these scripts do not exist yet, create them as part of repository bootstrap rather than changing the README to hide the intended workflow.
 
+## Design tokens
+
+The token package exposes the default light theme as CSS variables and typed references for JavaScript or TypeScript consumers:
+
+```tsx
+import { tokens } from '@phasic-ui/tokens';
+import '@phasic-ui/tokens/styles.css';
+
+const panelStyle = {
+  color: tokens.color.textPrimary,
+  background: tokens.color.bgSurface,
+};
+```
+
+Importing the stylesheet applies the light theme globally. To establish an explicit subtree boundary, add `data-ph-theme="light"` or the `ph-theme-light` class to a container. Components consume semantic variables such as `--ph-color-text-primary`; raw palette variables are implementation inputs rather than component contracts.
+
 ## API direction
 
 ### AsyncButton
