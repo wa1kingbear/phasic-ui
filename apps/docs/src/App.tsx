@@ -18,7 +18,7 @@ export function App() {
           <span>Phasic UI</span>
         </a>
         <p className="masthead-note">UI components for real product states.</p>
-        <span className="release-tag">Provider / phase 02</span>
+        <span className="release-tag">Primitives / phase 03</span>
       </header>
 
       <section className="hero" id="top" aria-labelledby="hero-title">
@@ -97,15 +97,15 @@ export function App() {
           </p>
           <div className="status-line">
             <span className="status-pulse" aria-hidden="true" />
-            <span>React theme boundary connected</span>
+            <span>Layout and typography primitives connected</span>
           </div>
         </article>
 
         <article className="foundation-card foundation-card-dark">
           <span className="card-number">03</span>
           <h3>Next phase</h3>
-          <p>Layout and typography primitives will consume the foundation.</p>
-          <code>tokens ✓ → provider ✓ → primitives</code>
+          <p>Button and IconButton will turn the foundation interactive.</p>
+          <code>provider ✓ → primitives ✓ → actions</code>
         </article>
       </section>
     </main>

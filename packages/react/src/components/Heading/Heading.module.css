@@ -1,0 +1,28 @@
+.root {
+  margin: 0;
+  color: var(--ph-color-text-primary);
+  font-family: var(--ph-font-family-sans);
+  font-weight: var(--ph-font-weight-bold);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.display {
+  font-size: var(--ph-font-size-display);
+  line-height: var(--ph-line-height-display);
+}
+
+.heading-1 {
+  font-size: var(--ph-font-size-heading-1);
+  line-height: var(--ph-line-height-heading-1);
+}
+
+.heading-2 {
+  font-size: var(--ph-font-size-heading-2);
+  line-height: var(--ph-line-height-heading-2);
+}
+
+.heading-3 {
+  font-size: var(--ph-font-size-heading-3);
+  line-height: var(--ph-line-height-heading-3);
+}
