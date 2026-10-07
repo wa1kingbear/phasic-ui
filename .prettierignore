@@ -1,0 +1,12 @@
+coverage
+dist
+node_modules
+playwright-report
+storybook-static
+test-results
+.turbo
+pnpm-lock.yaml
+docs/reference
+docs/*.md
+AGENTS.md
+README.md
