@@ -18,7 +18,7 @@ export function App() {
           <span>Phasic UI</span>
         </a>
         <p className="masthead-note">UI components for real product states.</p>
-        <span className="release-tag">Foundation / pre-alpha</span>
+        <span className="release-tag">Tokens / phase 01</span>
       </header>
 
       <section className="hero" id="top" aria-labelledby="hero-title">
@@ -97,15 +97,15 @@ export function App() {
           </p>
           <div className="status-line">
             <span className="status-pulse" aria-hidden="true" />
-            <span>Ready for the first vertical slice</span>
+            <span>Semantic token layer connected</span>
           </div>
         </article>
 
         <article className="foundation-card foundation-card-dark">
           <span className="card-number">03</span>
           <h3>Next phase</h3>
-          <p>Semantic tokens establish the visual and behavioral language.</p>
-          <code>tokens → provider → primitives</code>
+          <p>A thin provider will expose the theme boundary to React.</p>
+          <code>tokens ✓ → provider → primitives</code>
         </article>
       </section>
     </main>
